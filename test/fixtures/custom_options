@@ -1,0 +1,17 @@
+var range = customFn(function() {
+  /**
+  * @options { applySelf: true }
+  * @defaults { start: 0, length: 10, step: 1 }
+  * @rules () -> array
+  * @rules (int start) -> array
+  * @rules (int start, int length) -> array
+  * @rules (int start, int length, int step) -> array
+  */
+
+  var i, result = [], count = 0;
+  for (i = this.start; count < this.length; count++, i += this.step) {
+    result.push(i);
+  }
+
+  return result;
+});
